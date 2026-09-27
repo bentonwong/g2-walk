@@ -1,0 +1,16 @@
+name: a11yci Accessibility Scan
+
+on:
+  push:
+    branches: [main]   # scans on main set the baseline PRs are diffed against
+  pull_request:
+
+jobs:
+  a11yci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: a11yci/scan@v1
+        with:
+          url: https://your-staging-url.example.com
+          api-key: ${{ secrets.A11YCI_KEY }}
