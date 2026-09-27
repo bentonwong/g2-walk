@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: a11yci/scan@v1
         with:
-          url: https://your-staging-url.example.com
+          url: https://wcag-bad-demo.vercel.app/before/home.html
           api-key: ${{ secrets.A11YCI_KEY }}
